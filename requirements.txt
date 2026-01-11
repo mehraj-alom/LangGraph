@@ -4,3 +4,4 @@ langchain-openai
 dotenv
 langchain-google-genai
 google-generativeai
+streamlit
