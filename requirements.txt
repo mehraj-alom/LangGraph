@@ -5,3 +5,4 @@ dotenv
 langchain-google-genai
 google-generativeai
 streamlit
+langgraph-checkpoint-sqlite

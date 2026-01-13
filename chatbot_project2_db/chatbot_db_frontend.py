@@ -1,5 +1,5 @@
 import streamlit as st
-from chatbot_backend import chatbot
+from chatbot_db_backed import chatbot,retrive_all_threads
 from langchain_core.messages import HumanMessage , AIMessage
 import uuid
 
@@ -21,7 +21,6 @@ def reset_chat():
 
 
 
-
 def load_conversation(thread_id):
     config = {
     'configurable': {
@@ -39,7 +38,7 @@ if 'message_history' not in st.session_state:
 if 'thread_id' not in st.session_state:
     st.session_state['thread_id'] = generate_thread_id()
 if 'chat_threads' not in st.session_state:
-    st.session_state['chat_threads'] = []
+    st.session_state['chat_threads'] = retrive_all_threads()
 add_thread(st.session_state['thread_id'])   
 
 
